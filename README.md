@@ -7,6 +7,14 @@
 - The analysis focuses exclusively on logs with version 2; other versions will not be considered.
 - The program ignores case sensitivity for the action and protocol entries.
 - Future enhancements may include more robust error handling for input files, ensuring invalid or incorrectly formatted log entries are logged and skipped gracefully.
+- The analyzer has been tested with sample logs, including handling of other versions and accounting for blank spaces in log entries.
+- Tested with case-insensitive lookups using `lookup.csv` and `lookup.txt`, demonstrating that both file types can be utilized as the code does not rely on the CSV library.
+
+## Future Assumptions
+- Input File Handling: Future enhancements may include:
+- Implementing more robust error handling and validation for input files.
+- Logging any invalid or incorrectly formatted log entries for review.
+- Supporting additional log formats or versions as needed.
 
 ## Features
 
@@ -14,7 +22,7 @@
 - **Output Generation**: Generates two CSV files:
   - **Tag Count**: Contains the count of occurrences for each tag found in the logs.
   - **Port/Protocol Count**: Contains the count of occurrences for each port/protocol combination.
-- **Flexible Input**: You can easily specify the file paths for log files, lookup tables, and output files in a dedicated variables.py file.
+- **Flexible Input**: You can easily specify the file paths for log files, lookup tables, and output files in a dedicated `variables.py` file.
 - **No External Libraries**: The code is implemented without using additional libraries, ensuring compatibility and simplicity.
 
 ## Code Explanation
@@ -44,13 +52,25 @@
      - Updates counts for tags and port/protocol combinations.
      - Calls the `createOutputFile` function to generate the output files.
 
+## Input and Output
+### Input:
+
+- Log file containing flow logs.
+- Lookup table for port/protocol mappings (supports both CSV and TXT formats).
+- Protocol mapping file.
+
+### Output:
+
+- tag_count_output.csv: Contains tag counts.
+- port_protocol_output.csv: Contains port/protocol combination counts.
+
 ### Usage
 
 1. **Setup**: Ensure that you have Python installed on your machine.
 
 2. **File Locations**: Specify the following variables in `variables.py`:
    - LOG_FILE: Path to the AWS flow log file.
-   - LOOKUP_FILE: Path to the CSV file containing the lookup table.
+   - LOOKUP_FILE: Path to the CSV or TXT file containing the lookup table.
    - PROTOCOL_FILE: Path to the CSV file containing protocol mappings.
    - TAG_COUT_OUTPUT: Path where the tag count CSV will be saved.
    - PORT_PROTOCOL_OUTPUT: Path where the port/protocol count CSV will be saved.
@@ -60,3 +80,5 @@
 
 ```bash
 python loganalyzer.py
+```
+
