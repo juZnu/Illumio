@@ -1,4 +1,3 @@
-
 from file_location import LOG_FILE, LOOKUP_FILE, PROTOCOL_FILE, TAG_COUT_OUTPUT, PORT_PROTOCOL_OUTPUT
 from variables import LOG_KEYS, SKIP
 
