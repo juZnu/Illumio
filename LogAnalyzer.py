@@ -17,7 +17,7 @@ def createProtocolList(protocol_file):
                     continue
                 
                 protocolList[decimal] = protocol
-            except (ValueError, IndexError):
+            except ValueError:
                 continue
 
     return protocolList
@@ -78,7 +78,7 @@ def analyzeLogs(log_file,protocol_file ,lookup_file ,tag_output_file,port_protoc
             
             logMap = createLogMap(line)
             
-            if logMap['action'] == skip:
+            if logMap['action'] == skip or logMap['version'] != 2:
                 continue
             
             port = logMap['dstport']
