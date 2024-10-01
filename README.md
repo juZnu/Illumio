@@ -68,7 +68,7 @@
 
 1. **Setup**: Ensure that you have Python installed on your machine.
 
-2. **File Locations**: Specify the following variables in `variables.py`:
+2. **File Locations**: Specify the following variables in  `file_location.py` and `variables.py`:
    - LOG_FILE: Path to the AWS flow log file.
    - LOOKUP_FILE: Path to the CSV or TXT file containing the lookup table.
    - PROTOCOL_FILE: Path to the CSV file containing protocol mappings.
