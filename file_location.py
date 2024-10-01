@@ -1,0 +1,5 @@
+LOG_FILE = 'files/logs.txt'
+LOOKUP_FILE = 'files/lookup.csv'
+PROTOCOL_FILE = 'files/protocol-numbers-1.csv'
+TAG_COUT_OUTPUT = 'output/tag_count.csv'
+PORT_PROTOCOL_OUTPUT = 'output/port_protocol_count.csv'
