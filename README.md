@@ -70,7 +70,12 @@
 
 1. **Setup**: Ensure that you have Python installed on your machine.
 
-2. **File Locations**: Specify the following variables in `file_location.py` and `variables.py`:
+2.**Clone the Repository**: 
+   ```bash
+   git clone https://github.com/juZnu/Illumio.git
+   cd Illumio
+   ```
+3. **File Locations**: Specify the following variables in `file_location.py` and `variables.py`:
    - `LOG_FILE`: Path to the AWS flow log file.
    - `LOOKUP_FILE`: Path to the CSV or TXT file containing the lookup table.
    - `PROTOCOL_FILE`: Path to the CSV file containing protocol mappings.
@@ -78,8 +83,8 @@
    - `PORT_PROTOCOL_OUTPUT`: Path where the port/protocol count CSV will be saved.
    - `SKIP`: (Optional) Define an action to skip during analysis (e.g., "REJECT").
 
-3. **Run the Analyzer**: Execute the `loganalyzer.py` file. The output files will be generated in the specified locations.
+4. **Run the Analyzer**: Execute the `loganalyzer.py` file. The output files will be generated in the specified locations.
 
-```bash
-python loganalyzer.py
-```
+    ```bash
+    python loganalyzer.py
+    ```
