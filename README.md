@@ -70,7 +70,7 @@
 
 1. **Setup**: Ensure that you have Python installed on your machine.
 
-2.**Clone the Repository**: 
+2. **Clone the Repository**: 
    ```bash
    git clone https://github.com/juZnu/Illumio.git
    cd Illumio
