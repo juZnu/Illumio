@@ -8,6 +8,7 @@
 - The program ignores case sensitivity for the `protocol` entry and `tag`.
 - The analyzer has been tested with sample logs, including handling of other versions and accounting for blank spaces in log entries.
 - Tested with case-insensitive lookups using `lookup.csv`.
+- Testing has been conducted with different log files and varying log inputs to ensure flexibility and robustness.
 - The `lookup_file` and output files are also expected to be in CSV format.
 - Error handling includes:
   - Missing or invalid file paths.
